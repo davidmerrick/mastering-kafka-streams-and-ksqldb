@@ -64,9 +64,8 @@ class LeaderboardTopology {
      * key type
      */
     KeyValueMapper<String, ScoreWithPlayer, String> keyMapper =
-        (leftKey, scoreWithPlayer) -> {
-          return String.valueOf(scoreWithPlayer.getScoreEvent().getProductId());
-        };
+        (leftKey, scoreWithPlayer) ->
+            String.valueOf(scoreWithPlayer.getScoreEvent().getProductId());
 
     // join the withPlayers stream to the product global ktable
     ValueJoiner<ScoreWithPlayer, Product, Enriched> productJoiner =

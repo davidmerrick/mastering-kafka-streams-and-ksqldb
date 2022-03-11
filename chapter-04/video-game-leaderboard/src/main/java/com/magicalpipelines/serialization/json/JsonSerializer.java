@@ -8,7 +8,7 @@ import java.util.Map;
 import org.apache.kafka.common.serialization.Serializer;
 
 class JsonSerializer<T> implements Serializer<T> {
-  private Gson gson =
+  private final Gson gson =
       new GsonBuilder()
           .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
           .create();

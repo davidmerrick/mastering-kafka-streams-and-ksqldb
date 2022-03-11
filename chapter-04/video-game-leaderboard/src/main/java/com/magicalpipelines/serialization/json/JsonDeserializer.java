@@ -9,7 +9,7 @@ import java.util.Map;
 import org.apache.kafka.common.serialization.Deserializer;
 
 public class JsonDeserializer<T> implements Deserializer<T> {
-  private Gson gson =
+  private final Gson gson =
       new GsonBuilder()
           .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
           .create();

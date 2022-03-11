@@ -3,11 +3,11 @@ package com.magicalpipelines.model.join;
 import com.magicalpipelines.model.Product;
 
 public class Enriched implements Comparable<Enriched> {
-  private Long playerId;
-  private Long productId;
-  private String playerName;
-  private String gameName;
-  private Double score;
+  private final Long playerId;
+  private final Long productId;
+  private final String playerName;
+  private final String gameName;
+  private final Double score;
 
   public Enriched(ScoreWithPlayer scoreEventWithPlayer, Product product) {
     this.playerId = scoreEventWithPlayer.getPlayer().getId();

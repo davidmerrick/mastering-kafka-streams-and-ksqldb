@@ -4,8 +4,8 @@ import com.magicalpipelines.model.Player;
 import com.magicalpipelines.model.ScoreEvent;
 
 public class ScoreWithPlayer {
-  private ScoreEvent scoreEvent;
-  private Player player;
+  private final ScoreEvent scoreEvent;
+  private final Player player;
 
   public ScoreWithPlayer(ScoreEvent scoreEvent, Player player) {
     this.scoreEvent = scoreEvent;
